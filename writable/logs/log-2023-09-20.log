@@ -1,0 +1,536 @@
+INFO - 2023-09-20 15:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:45:27 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:46:30 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:47:31 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:48:35 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:48:37 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:50:22 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:50:28 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 15:51:22 --> Undefined variable: kode_jenis_usaha
+in APPPATH\Views\sektor\v_list.php on line 24.
+ 1 APPPATH\Views\sektor\v_list.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kode_jenis_usaha', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php', 24, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\sektor\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('sektor/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('sektor/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Sektor.php(24): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Sektor->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sektor))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 15:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 15:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-20 16:06:15 --> mysqli_sql_exception: Table 'tjslptinti.koderekening' doesn't exist in C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\TJSL PT INTI\TJSL\app\Models\KodeRekeningModel.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\TJSL PT INTI\TJSL\app\Controllers\KodeRekening.php(21): App\Models\KodeRekeningModel->get_koderekening()
+#6 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\KodeRekening->index()
+#7 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeRekening))
+#8 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI...')
+#11 {main}
+CRITICAL - 2023-09-20 16:06:16 --> Table 'tjslptinti.koderekening' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `koderekening`', [], false)
+ 2 APPPATH\Models\KodeRekeningModel.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\KodeRekening.php(21): App\Models\KodeRekeningModel->get_koderekening()
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KodeRekening->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeRekening))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 16:39:11 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('0')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 16:41:53 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('0')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 16:44:55 --> Invalid file: "ketkolektibilitas/v_list.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ketkolektibilitas/v_list.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_list', [], true)
+ 3 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_list')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 7 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+ 8 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+ 9 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+11 APPPATH\Controllers\KetKolektibilitas.php(24): view('layout/v_wrapper', [...])
+12 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->index()
+13 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+14 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 16:51:24 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('1')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 16:54:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('2')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 16:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-20 16:57:31 --> mysqli_sql_exception: Column 'kolektibilitas' cannot be null in C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ke...', 0)
+#1 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ke...')
+#2 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ke...')
+#3 C:\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ke...', Array, false)
+#4 C:\TJSL PT INTI\TJSL\app\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\TJSL PT INTI\TJSL\app\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas(Array)
+#6 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+#7 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+#8 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI...')
+#11 {main}
+CRITICAL - 2023-09-20 16:57:31 --> Column 'kolektibilitas' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kel_kolektibilitas` (`kode_kolektibilitas`, `Kolektibilitas`) VALUES (:kode_kolektibilitas:, :Kolektibilitas:)', [...], false)
+ 2 APPPATH\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+ERROR - 2023-09-20 16:57:50 --> mysqli_sql_exception: Column 'kolektibilitas' cannot be null in C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ke...', 0)
+#1 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ke...')
+#2 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ke...')
+#3 C:\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ke...', Array, false)
+#4 C:\TJSL PT INTI\TJSL\app\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\TJSL PT INTI\TJSL\app\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas(Array)
+#6 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+#7 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+#8 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI...')
+#11 {main}
+CRITICAL - 2023-09-20 16:57:50 --> Column 'kolektibilitas' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kel_kolektibilitas` (`kode_kolektibilitas`, `Kolektibilitas`) VALUES (:kode_kolektibilitas:, :Kolektibilitas:)', [...], false)
+ 2 APPPATH\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+ERROR - 2023-09-20 16:57:58 --> mysqli_sql_exception: Column 'kolektibilitas' cannot be null in C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ke...', 0)
+#1 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ke...')
+#2 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ke...')
+#3 C:\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ke...', Array, false)
+#4 C:\TJSL PT INTI\TJSL\app\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\TJSL PT INTI\TJSL\app\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas(Array)
+#6 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+#7 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+#8 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI...')
+#11 {main}
+CRITICAL - 2023-09-20 16:57:58 --> Column 'kolektibilitas' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kel_kolektibilitas` (`kode_kolektibilitas`, `Kolektibilitas`) VALUES (:kode_kolektibilitas:, :Kolektibilitas:)', [...], false)
+ 2 APPPATH\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 16:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-20 16:58:14 --> mysqli_sql_exception: Column 'kolektibilitas' cannot be null in C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ke...', 0)
+#1 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ke...')
+#2 C:\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ke...')
+#3 C:\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ke...', Array, false)
+#4 C:\TJSL PT INTI\TJSL\app\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\TJSL PT INTI\TJSL\app\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas(Array)
+#6 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+#7 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+#8 C:\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI...')
+#11 {main}
+CRITICAL - 2023-09-20 16:58:14 --> Column 'kolektibilitas' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `kel_kolektibilitas` (`kode_kolektibilitas`, `Kolektibilitas`) VALUES (:kode_kolektibilitas:, :Kolektibilitas:)', [...], false)
+ 2 APPPATH\Models\KetKolektibilitasModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\KetKolektibilitas.php(41): App\Models\KetKolektibilitasModel->insert_ketkolektibilitas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->save()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 17:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 17:09:39 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('3')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 17:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-20 17:10:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\ketkolektibilitas\v_edit.php on line 9.
+ 1 APPPATH\Views\ketkolektibilitas\v_edit.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\ketkolektibilitas\\v_edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ketkolektibilitas/v_edit', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('ketkolektibilitas/v_edit')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\TJSL PT INTI\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\KetKolektibilitas.php(52): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\KetKolektibilitas->edit('3')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KetKolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-09-20 17:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-20 17:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

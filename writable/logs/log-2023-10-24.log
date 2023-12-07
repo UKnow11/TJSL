@@ -1,0 +1,51 @@
+INFO - 2023-10-24 06:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 06:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-24 07:08:18 --> mysqli_sql_exception: Column 'no_bukti_transaksi' cannot be null in E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `as...', 0)
+#1 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `as...')
+#2 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `as...')
+#3 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `as...', Array, false)
+#4 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\app\Models\AsetModel.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\app\Controllers\Aset.php(60): App\Models\AsetModel->insert_aset(Array)
+#6 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\CodeIgniter.php(915): App\Controllers\Aset->save()
+#7 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aset))
+#8 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Afif\TJSL PT INTI\TJSL PT INTI\TJSL\system\Commands\Server\rewrite.php(47): require_once('E:\\Afif\\TJSL PT...')
+#11 {main}
+CRITICAL - 2023-10-24 07:08:18 --> Column 'no_bukti_transaksi' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `aset` (`no_bukti_transaksi`, `tanggal_transaksi`, `nominal`, `group`, `keterangan_transaksi`, `kode_akun`, `debet`, `kredit`) VALUES (:no_bukti_transaksi:, :tanggal_transaksi:, :nominal:, :group:, :keterangan_transaksi:, :kode_akun:, :debet:, :kredit:)', [...], false)
+ 2 APPPATH\Models\AsetModel.php(18): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Aset.php(60): App\Models\AsetModel->insert_aset([...])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Aset->save()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Aset))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Afif\\TJSL PT INTI\\TJSL PT INTI\\TJSL\\public\\index.php')
+INFO - 2023-10-24 07:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-24 07:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
