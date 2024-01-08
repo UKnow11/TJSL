@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\KolektibilitasModel;
+use CodeIgniter\Database\BaseResult;
+use CodeIgniter\I18n\Time;
 
 class Kolektibilitas extends BaseController
 {
@@ -21,6 +23,7 @@ class Kolektibilitas extends BaseController
             'kolektibilitas' => $this->KolektibilitasModel->paginate(12528),  // Mengambil data cicilan kolektibilitas dan melakukan penomoran halaman.
             'pager' => $this->KolektibilitasModel->pager,  // Mengatur pengaturan halaman.
             'isi' => 'kolektibilitas/v_list',  // Memuat tampilan 'v_list' sebagai konten halaman.
+            'tes_kolektibilitas' => $this->hitung_kolektibilitas(5082), // Menampilkan kolektibilitas pada view
         ];
         echo view('layout/v_wrapper', $data);  // Memuat tampilan 'v_wrapper' dan meneruskan data untuk merender halaman lengkap.
     }
@@ -87,55 +90,75 @@ class Kolektibilitas extends BaseController
     public function hitung_kolektibilitas($no_kontrak)
     {
         // Method untuk menghitung kolektibilitas berdasarkan nomor kontrak
-        
+
         $model = model(KolektibilitasModel::class);
         
         // Pokok dan jasa masih belum ada tabelnya
+        $pokoktetap = 3125000;
         $pokok = 0;
         $jasa = 0;
+        $selisih = 0;
+        $selisihSebelumnya = 0;
+        $kolekSebelumnya = 0;
+        $kolek = 0;
+        $totalkolek = array();
+        $tanggalSebelumnya = 0;
+        $tanggalLunas = 0;
 
-        for($i = 1; $i = $model->where('angsuran_pokok !=', 0)->countAllResults(); $i++)
+        $query = $model->distinct()->where('no_kontrak', $no_kontrak)->where('angsuran_pokok !=', 0)->get();
+        $total = $query->getNumRows();
+        
+        $query = $model->distinct()->where('angsuran_pokok !=', 0)->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->get();
+        $row = $query->getRowArray();
+
+        for($j = 1; $j <= $total; $j++)
         {
-            $tanggal = new DateTime($model->select('tanggal_cicilan')->where('no_kontrak', $no_kontrak)->where('no_cicilan', $i));
-            $cicilan = $model->where('angsuran_pokok !=', 0)->where('no_kontrak', $no_kontrak)->where('no_cicilan', $i)->get();
+            if(isset($row))
+            {
+                $tanggal = strtotime($row['tanggal_cicilan']);
+                $pokok = $row['angsuran_pokok'];
+                $jasa = $row['angsuran_jasa'];
+            }
 
+            $cicilan = $pokok + $jasa;
+            
             if(empty($tanggalLunas))
             {
-                $selisihHari = (empty($tanggalSebelumnya) ? 0 : $tanggal->diff($tanggalSebelumnya)->days);
+                $selisihHari = (!empty($tanggalSebelumnya) ? 0 : round(abs($tanggalSebelumnya - $tanggal) / 86400));
             } else {
-                $selisihHari = (empty($tanggalLunas) ? 0 : $tanggal->diff($tanggalLunas)->days);
+                $selisihHari = (!empty($tanggalLunas) ? 0 : round(abs($tanggalLunas - $tanggal / 86400)));
             }
+            
             $cicilan = $cicilan - $jasa - $selisih;
-
-            if($cicilan == $pokok || $cicilan > $pokok)
+    
+            if($cicilan == $pokoktetap || $cicilan > $pokoktetap)
             {
                 $selisih = 0;
-            } else if($cicilan < $pokok) {
-                $selisih = $pokok - $cicilan;
+            } else if($cicilan < $pokoktetap) {
+                $selisih = $pokoktetap - $cicilan;
             }
-        
+            
             if($selisih != 0)
             {
-                if($cicilanSebelumnya + $selisihSebelumnya == pokok && $cicilan > 0)
+                if($cicilanSebelumnya + $selisihSebelumnya == $pokoktetap && $cicilan > 0)
                 {
                     $tanggalLunas = $tanggalSebelumnya;
-                } else if($cicilan < 0)
-                {
+                } else if($cicilan < 0) {
                     if(empty($tanggalLunas))
                     {
                         $tanggalLunas = $tanggalSebelumnya;
                     }
-                    $selisihHari = (empty($tanggalLunas) ? 0 : $tanggal->diff($tanggalLunas)->days);
+                    $selisihHari = (empty($tanggalLunas) ? 0 : round(abs($tanggalLunas - $tanggal) / 86400));
+                } else {
+                    if($selisihSebelumnya != 0)
+                    {
+                        $tanggalLunas = $tanggalSebelumnya;
+                        $selisihHari = (empty($tanggalLunas) ? 0 : round(abs($tanggalLunas - $tanggal) / 86400)); 
+                    }
+                    $tanggalLunas = $tanggal;
                 }
-            } else {
-                if($selisihSebelumnya != 0)
-                {
-                    $tanggalLunas = $tanggalSebelumnya;
-                    $selisihHari = (empty($tanggalLunas) ? 0 : $tanggal->diff($tanggalLunas)->days); 
-                }
-                $tanggalLunas = $tanggal;
             }
-        
+            
             if($selisihHari <= 30)
             {
                 $kolek = 1;
@@ -146,31 +169,33 @@ class Kolektibilitas extends BaseController
             } else if($selisihHari > 180) {
                 $kolek = 4;
             }
-    
+        
             // If untuk mengecek situasi dimana kolektibilitas hanya dapat naik perlahan
             if($kolek < $kolekSebelumnya)
             {
                 $kolek = $kolekSebelumnya - 1;
-        
                 // If untuk mengecek cicilan parsial sehingga kolektabilitas tidak dapat naik
                 if($selisihSebelumnya != 0 && $selisih != 0 && $kolek < 4)
                 {
-        	        $kolek = $kolekSebelumnya;
-		        }
+                    $kolek = $kolekSebelumnya;
+                }
             }
-                // If untuk mengecek perubahan cicilan full menjadi cicilan parsial sehingga kolektibilitas naik satu
+            
+            // If untuk mengecek perubahan cicilan full menjadi cicilan parsial sehingga kolektibilitas naik satu
             if($selisihSebelumnya == 0 && $selisih != 0 && $kolekSebelumnya < 4)
             {
                 $kolek+=1;
             }
-
+    
+            array_push($totalkolek, $kolek);
             $kolekSebelumnya = $kolek;
             $cicilanSebelumnya = $cicilan;
             $tanggalSebelumnya = $tanggal;
             $selisihSebelumnya = $selisih;
+            $row = $query->getNextRow('array');
         }
         session()->setFlashdata('success', 'Kolektibilitas Berhasil Di Hitung');
-
         return $kolek;
+        // return $totalkolek;
     }
 }

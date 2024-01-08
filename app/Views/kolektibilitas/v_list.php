@@ -27,6 +27,7 @@
                 <th>Angsuran Pokok</th>
                 <th>Angsuran Jasa</th>
                 <th>Kode kolektibilitas</th>
+                <th>Tes kolektibilitas</th>
                 <th>Action</th>
                 <!-- Ini adalah baris header tabel yang menunjukkan judul kolom. -->
             </tr>
@@ -41,7 +42,7 @@
                     <td><?= $value['angsuran_pokok']; ?></td>
                     <td><?= $value['angsuran_jasa']; ?></td>
                     <td><?= $value['kode_kolektibilitas']; ?></td>
-
+                    <td><?= $tes_kolektibilitas ?></td>
                     <td>
                         <a href="<?= base_url('kolektibilitas/edit/' . $value['no_kontrak']) ?>" class="href btn btn-warning">Edit</a>
                         <!-- Tombol "Edit" yang mengarah ke URL edit kolektibilitas. -->
