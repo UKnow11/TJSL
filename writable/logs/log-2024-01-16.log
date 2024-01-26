@@ -1,0 +1,231 @@
+INFO - 2024-01-16 02:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 02:54:30 --> Undefined offset: 13
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 13', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('2')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 02:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 02:54:53 --> Undefined offset: 13
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 13', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('586')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 02:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 02:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 02:55:18 --> Undefined offset: 12
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 12', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('1')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-16 03:19:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`pokok` > 0
+ORDER BY `tanggal_cicilan` ASC' at line 4 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\app\Models\KolektibilitasModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(94): App\Models\KolektibilitasModel->display_kolektibilitas('1')
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('1')
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#11 {main}
+CRITICAL - 2024-01-16 03:19:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`pokok` > 0
+ORDER BY `tanggal_cicilan` ASC' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT *
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran` `pokok` > :angsuran pokok:
+ORDER BY `tanggal_cicilan` ASC', [...], false)
+ 2 APPPATH\Models\KolektibilitasModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kolektibilitas.php(94): App\Models\KolektibilitasModel->display_kolektibilitas('1')
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('1')
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 03:23:38 --> Undefined offset: 12
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 12', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('667')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 03:23:58 --> Undefined offset: 13
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 13', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('3083')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 03:24:40 --> Undefined offset: 13
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 13', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('1759')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 03:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 03:25:30 --> Undefined offset: 13
+in APPPATH\Views\kolektibilitas\v_display.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_display.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 13', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_display.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_display', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_display')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(98): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->display('348')
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 03:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 05:21:04 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Models\KolektibilitasModel.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Models\\KolektibilitasModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\KolektibilitasModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\KolektibilitasModel')
+ 4 APPPATH\Controllers\Kolektibilitas.php(14): spl_autoload_call('App\\Models\\KolektibilitasModel')
+ 5 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Kolektibilitas->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(483): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 05:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 05:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 05:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-16 05:21:14 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Models\KolektibilitasModel.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Models\\KolektibilitasModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\KolektibilitasModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\KolektibilitasModel')
+ 4 APPPATH\Controllers\Kolektibilitas.php(14): spl_autoload_call('App\\Models\\KolektibilitasModel')
+ 5 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Kolektibilitas->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(483): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-16 05:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 06:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 06:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 06:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-16 06:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

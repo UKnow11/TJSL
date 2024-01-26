@@ -24,10 +24,6 @@
             <tr>
                 <th>NO Kontrak</th>
                 <th>Tanggal Cicilan</th>
-                <th>Angsuran Pokok</th>
-                <th>Angsuran Jasa</th>
-                <th>Kode kolektibilitas</th>
-                <th>Tes kolektibilitas</th>
                 <th>Action</th>
                 <!-- Ini adalah baris header tabel yang menunjukkan judul kolom. -->
             </tr>
@@ -39,16 +35,15 @@
                 <tr>
                     <td><?= $value['no_kontrak']; ?></td>
                     <td><?= $value['tanggal_cicilan']; ?></td>
-                    <td><?= $value['angsuran_pokok']; ?></td>
-                    <td><?= $value['angsuran_jasa']; ?></td>
-                    <td><?= $value['kode_kolektibilitas']; ?></td>
-                    <td><?= $tes_kolektibilitas ?></td>
                     <td>
-                        <a href="<?= base_url('kolektibilitas/edit/' . $value['no_kontrak']) ?>" class="href btn btn-warning">Edit</a>
                         <!-- Tombol "Edit" yang mengarah ke URL edit kolektibilitas. -->
+                        <a href="<?= base_url('kolektibilitas/edit/' . $value['no_kontrak']) ?>" class="href btn btn-warning">Edit</a>
                         <br><br>
-                        <a href="<?= base_url('kolektibilitas/delete/' . $value['no_kontrak']) ?> " class="btn btn-danger" onclick="return confirm('hapus data')">Delete</a>
+                        <!-- Tombol "Display" yang mengarah ke URL display kolektibilitas. -->
+                        <a href="<?= base_url('kolektibilitas/display/' . $value['no_kontrak']) ?> " class="href btn btn-warning">Display</a>
+                        <br><br>
                         <!-- Tombol "Delete" yang mengarah ke URL hapus kolektibilitas dan meminta konfirmasi pengguna sebelum menghapus data. -->
+                        <a href="<?= base_url('kolektibilitas/delete/' . $value['no_kontrak']) ?> " class="btn btn-danger" onclick="return confirm('hapus data')">Delete</a>
                     </td>
                 </tr>
             <?php } ?>

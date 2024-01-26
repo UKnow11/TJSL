@@ -1,0 +1,144 @@
+INFO - 2023-12-22 02:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-22 02:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-22 02:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-22 02:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-22 02:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-22 05:44:04 --> Call to undefined function App\Controllers\hitung_kolektibilitas()
+in APPPATH\Controllers\Kolektibilitas.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-22 05:47:17 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...], false)
+ 6 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 7 APPPATH\Controllers\Kolektibilitas.php(99): CodeIgniter\Model->countAllResults()
+ 8 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(Object(CodeIgniter\Database\MySQLi\Result))
+ 9 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+10 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-22 05:52:44 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...], false)
+ 6 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 7 APPPATH\Controllers\Kolektibilitas.php(99): CodeIgniter\Model->countAllResults()
+ 8 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(Object(CodeIgniter\Database\MySQLi\Result))
+ 9 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+10 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-22 05:59:13 --> Object of class App\Models\KolektibilitasModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...], false)
+ 6 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 7 APPPATH\Controllers\Kolektibilitas.php(99): CodeIgniter\Model->countAllResults()
+ 8 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(Object(App\Models\KolektibilitasModel))
+ 9 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+10 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-22 05:59:46 --> Object of class App\Models\KolektibilitasModel could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT `no_kontrak`
+FROM `cicilan`
+WHERE `no_kontrak` = :no_kontrak:
+AND `angsuran_pokok` != :angsuran_pokok:
+) CI_count_all_results', [...], false)
+ 6 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 7 APPPATH\Controllers\Kolektibilitas.php(99): CodeIgniter\Model->countAllResults()
+ 8 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(Object(App\Models\KolektibilitasModel))
+ 9 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+10 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+11 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')

@@ -1,0 +1,91 @@
+INFO - 2024-01-04 04:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 04:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 04:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 04:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-04 04:37:18 --> Array to string conversion
+in APPPATH\Views\kolektibilitas\v_list.php on line 45.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(27): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-04 04:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-04 04:37:53 --> Undefined index: tes_kolektibilitas
+in APPPATH\Views\kolektibilitas\v_list.php on line 45.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: tes_kolektibilitas', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(27): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-04 04:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-04 04:38:11 --> Array to string conversion
+in APPPATH\Views\kolektibilitas\v_list.php on line 45.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(27): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-04 04:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-04 04:39:11 --> Undefined variable: tes_kolektibiltas
+in APPPATH\Views\kolektibilitas\v_list.php on line 45.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tes_kolektibiltas', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(27): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-04 04:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 04:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 04:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-04 05:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

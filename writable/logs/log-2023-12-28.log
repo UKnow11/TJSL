@@ -1,0 +1,193 @@
+INFO - 2023-12-28 02:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-28 02:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-28 02:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-28 02:48:09 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(99): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 02:48:52 --> Call to undefined method App\Models\KolektibilitasModel::getResultArray
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(103): CodeIgniter\Model->__call('getResultArray', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(25): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 02:50:43 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 02:50:44 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 02:50:45 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 03:36:44 --> Call to undefined method App\Models\KolektibilitasModel::num_rows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('num_rows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 03:36:58 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:17:37 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:17:38 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:17:38 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:17:38 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:18:29 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(101): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:18:30 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(101): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:32:15 --> Undefined variable: total
+in APPPATH\Controllers\Kolektibilitas.php on line 102.
+ 1 APPPATH\Controllers\Kolektibilitas.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: total', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Controllers\\Kolektibilitas.php', 102, [...])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:32:34 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:33:03 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:33:04 --> Call to undefined method App\Models\KolektibilitasModel::getNumRows
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(100): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:34:34 --> Call to undefined method App\Models\KolektibilitasModel::getResultArray
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Kolektibilitas.php(106): CodeIgniter\Model->__call('getResultArray', [])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:34:52 --> Undefined variable: selisih
+in APPPATH\Controllers\Kolektibilitas.php on line 121.
+ 1 APPPATH\Controllers\Kolektibilitas.php(121): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: selisih', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Controllers\\Kolektibilitas.php', 121, [...])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:35:04 --> Undefined variable: selisihSebelumnya
+in APPPATH\Controllers\Kolektibilitas.php on line 145.
+ 1 APPPATH\Controllers\Kolektibilitas.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: selisihSebelumnya', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Controllers\\Kolektibilitas.php', 145, [...])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+CRITICAL - 2023-12-28 04:35:12 --> Undefined variable: kolekSebelumnya
+in APPPATH\Controllers\Kolektibilitas.php on line 166.
+ 1 APPPATH\Controllers\Kolektibilitas.php(166): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kolekSebelumnya', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Controllers\\Kolektibilitas.php', 166, [...])
+ 2 APPPATH\Controllers\Kolektibilitas.php(26): App\Controllers\Kolektibilitas->hitung_kolektibilitas(5082)
+ 3 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2023-12-28 04:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

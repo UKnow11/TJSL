@@ -50,14 +50,6 @@
                     <input name="pb" value="<?= $datacicilan['pb'] ?>" class="form-control" placeholder="PB">
                 </div>
 
-
-                <div class="form-group">
-                    <label>Kode Kolektebilitas</label>
-                    <input name="kode_kolektibilitas" value="<?= $datacicilan['kode_kolektibilitas'] ?>" class="form-control" placeholder="Kode Kolektibilitas">
-                </div>
-
-
-
             </div>
 
             <div class="card-footer">

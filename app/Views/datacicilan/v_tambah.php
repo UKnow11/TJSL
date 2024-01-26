@@ -50,13 +50,6 @@
                 </div>
 
 
-                <div class="form-group">
-                    <label>Kode Kolektibilitas</label>
-                    <input name="kode_kolektibilitas" class="form-control" placeholder="Kode Kolektibilitas">
-                </div>
-
-
-
             </div>
 
             <div class="card-footer">

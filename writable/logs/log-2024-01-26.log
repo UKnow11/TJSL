@@ -1,0 +1,1178 @@
+INFO - 2024-01-26 03:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 03:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 03:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 03:37:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_ja' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:37:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_ja' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 03:38:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+GROUP BY `no_kontrak`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 03:38:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+ LIMIT 6000', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:38:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 03:38:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0;
+FROM `cicilan`
+ LIMIT 6000', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:45:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 03:45:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0
+FROM `cicilan`
+ LIMIT 6000', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:45:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 03:45:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 6000' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0
+FROM `cicilan`
+ LIMIT 6000', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:45:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', Array)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#11 {main}
+CRITICAL - 2024-01-26 03:45:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0
+FROM `cicilan`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:45:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', Array)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#11 {main}
+CRITICAL - 2024-01-26 03:45:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0
+FROM `cicilan`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 03:46:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', Array)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#11 {main}
+CRITICAL - 2024-01-26 03:46:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT m.no_kontrak, m.tanggal_cicilan, m.angsuran_pokok, m.angsuran_jasa FROM (SELECT no_kontrak, MIN(tanggal_cicilan) AS First FROM cicilan GROUP BY no_kontrak) AS foo JOIN cicilan m ON foo.no_kontrak = m.no_kontrak AND foo.First = m.tanggal_cicilan WHERE angsuran_pokok > 0
+FROM `cicilan`', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 05:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-26 06:06:48 --> Undefined index: angsuran_pokok
+in APPPATH\Views\kolektibilitas\v_list.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: angsuran_pokok', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(28): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:23:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT *' at line 1 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT SELECT n...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT n...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT n...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SELECT n...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT *' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:23:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2 in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT no_kontr...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT no_kontr...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT no_kontr...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontr...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:23:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `cicilan`
+ LIMIT 12528' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT no_kontrak, tanggal_cicilan, angsuran_pokok, angsuran_jasa FROM (SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a WHERE rownum = 1
+FROM `cicilan`
+ LIMIT 12528', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:36:44 --> mysqli_sql_exception: Column 'no_kontrak' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `no_kont...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `no_kont...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `no_kont...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kont...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:36:44 --> Column 'no_kontrak' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+ LIMIT 12528', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(12528, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(12528, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(12528)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:37:41 --> mysqli_sql_exception: Column 'no_kontrak' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `no_kont...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `no_kont...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `no_kont...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kont...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:37:41 --> Column 'no_kontrak' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+ LIMIT 6000', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:38:31 --> mysqli_sql_exception: Column 'no_kontrak' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `no_kont...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `no_kont...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `no_kont...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kont...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:38:31 --> Column 'no_kontrak' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+ LIMIT 6000', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:39:58 --> mysqli_sql_exception: Column 'no_kontrak' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `no_kont...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `no_kont...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `no_kont...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kont...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:39:58 --> Column 'no_kontrak' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+ LIMIT 6000', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:41:39 --> mysqli_sql_exception: Column 'no_kontrak' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `no_kont...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `no_kont...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `no_kont...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kont...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:41:39 --> Column 'no_kontrak' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+ LIMIT 6000', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:46:25 --> mysqli_sql_exception: Column 'angsuran_pokok' in where clause is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 06:46:25 --> Column 'angsuran_pokok' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+AND `angsuran_pokok` > :angsuran_pokok:', [...], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 06:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 06:50:18 --> mysqli_sql_exception: Duplicate column name 'no_kontrak' in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 06:50:18 --> Duplicate column name 'no_kontrak'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT DISTINCT *
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+AND `cicilan`.`angsuran_pokok` > :cicilan.angsuran_pokok:
+) CI_count_all_results', [...], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+ERROR - 2024-01-26 06:53:05 --> mysqli_sql_exception: Column 'tanggal_cicilan' in field list is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `cicilan...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cicilan...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cicilan...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `cicilan...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#10 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#13 {main}
+CRITICAL - 2024-01-26 06:53:05 --> Column 'tanggal_cicilan' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `cicilan`.`no_kontrak`, `tanggal_cicilan`, `angsuran_pokok`, `angsuran_jasa`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `rownum` = :rownum:
+AND `cicilan`.`angsuran_pokok` > :cicilan.angsuran_pokok:
+ LIMIT 6000', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(6000, 0)
+ 4 SYSTEMPATH\BaseModel.php(1207): CodeIgniter\BaseModel->findAll(6000, 0)
+ 5 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 6 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-26 06:54:51 --> Undefined index: kode_kolektibilitas
+in APPPATH\Views\kolektibilitas\v_list.php on line 43.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_kolektibilitas', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(28): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 06:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-26 07:06:54 --> mysqli_sql_exception: Column 'angsuran_pokok' in where clause is ambiguous in C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Users\ROG\Documents\GitHub\TJSL\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ROG\Documents\GitHub\TJSL\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ROG\Documents\GitHub\TJSL\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ROG\Documents\GitHub\TJSL\app\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+#7 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+#8 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+#9 C:\Users\ROG\Documents\GitHub\TJSL\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ROG\Documents\GitHub\TJSL\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ROG\Documents\GitHub\TJSL\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Do...')
+#12 {main}
+CRITICAL - 2024-01-26 07:06:54 --> Column 'angsuran_pokok' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `cicilan`, (SELECT *, ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a
+WHERE `angsuran_pokok` > :angsuran_pokok:
+AND `rownum` = :rownum:', [...], false)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Kolektibilitas.php(23): CodeIgniter\BaseModel->paginate(6000)
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 07:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-26 07:11:29 --> Undefined index: angsuran_pokok
+in APPPATH\Views\kolektibilitas\v_list.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: angsuran_pokok', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(28): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 07:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-26 07:11:38 --> Undefined index: angsuran_pokok
+in APPPATH\Views\kolektibilitas\v_list.php on line 41.
+ 1 APPPATH\Views\kolektibilitas\v_list.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: angsuran_pokok', 'C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\kolektibilitas\\v_list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 5 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 9 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+10 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+11 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+12 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+13 APPPATH\Controllers\Kolektibilitas.php(28): view('layout/v_wrapper', [...])
+14 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+15 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+16 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 07:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-26 07:12:28 --> syntax error, unexpected '?>'
+in APPPATH\Views\kolektibilitas\v_list.php on line 41.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('kolektibilitas/v_list', [], true)
+ 3 APPPATH\Views\layout\v_content.php(4): view('kolektibilitas/v_list')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_content.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_content.php', [], true)
+ 7 APPPATH\Views\layout\v_wrapper.php(5): view('layout/v_content.php')
+ 8 SYSTEMPATH\View\View.php(226): include('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\app\\Views\\layout\\v_wrapper.php')
+ 9 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('layout/v_wrapper', [], true)
+11 APPPATH\Controllers\Kolektibilitas.php(28): view('layout/v_wrapper', [...])
+12 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Kolektibilitas->index()
+13 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kolektibilitas))
+14 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ROG\\Documents\\GitHub\\TJSL\\public\\index.php')
+INFO - 2024-01-26 07:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-26 07:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

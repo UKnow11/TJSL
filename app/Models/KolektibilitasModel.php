@@ -39,4 +39,9 @@ class KolektibilitasModel extends Model
         // Method delete_kolektibilitas: Menghapus data kolektibilitas berdasarkan 'no_kontrak' dari tabel 'cicilan'.
         return $this->db->table('cicilan')->delete(array('no_kontrak' => $no_kontrak));
     }
+
+    public function display_kolektibilitas($no_kontrak)
+    {
+        return $this->db->table('cicilan')->distinct()->where('no_kontrak', $no_kontrak)->where('angsuran_pokok >', 0)->orderBy('tanggal_cicilan', 'ASC')->get()->getResultArray();
+    }
 }
