@@ -33,12 +33,6 @@
                     <input name="angsuran_jasa" value="<?= $kolektibilitas['angsuran_jasa'] ?>" class="form-control" placeholder="Angsuran Jasa">
                 </div>
 
-
-                <div class="form-group">
-                    <label>kode kolektibilitas</label>
-                    <input name="kode_kolektibilitas" value="<?= $kolektibilitas['kode_kolektibilitas'] ?>" class="form-control" placeholder="kode kolektibilitas">
-                </div>
-
             </div>
 
             <div class="card-footer">

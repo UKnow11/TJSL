@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Controllers;
-
+ini_set('max_execution_time', 0); 
+ini_set('memory_limit','2048M');
+setlocale(LC_TIME, 'ind');
 use App\Models\KolektibilitasModel;
 use CodeIgniter\Database\BaseResult;
 use CodeIgniter\I18n\Time;
@@ -19,9 +21,9 @@ class Kolektibilitas extends BaseController
     {
         // Method Index: Menampilkan halaman Kolektibilitas dengan daftar data cicilan kolektibilitas.
         $data = [
-            'title' => 'Kolektibilitas',  // Mengatur judul tampilan.
+            'title' => 'Kolektibilitas Per ' . strftime('%d %B', strtotime("last day of last month")),  // Mengatur judul tampilan.
             // 'kolektibilitas' => $this->KolektibilitasModel->from('(SELECT * , ROW_NUMBER() OVER(PARTITION BY no_kontrak ORDER BY tanggal_cicilan ASC) AS rownum FROM cicilan) AS a')->where('cicilan.angsuran_pokok >', 0)->where('a.rownum', 1)->paginate(6000), // Bisa melakukan view tabel cicilan untuk hasil pertama tapi ngelag dan ngedobel
-            'kolektibilitas' => $this->KolektibilitasModel->select('no_kontrak, MIN(tanggal_cicilan) AS tanggal_cicilan, MIN(kode_kolektibilitas) AS kode_kolektibilitas', false)->groupBy('no_kontrak')->paginate(6000), // Mengambil data cicilan kolektibilitas dan melakukan penomoran halaman.
+            'kolektibilitas' => $this->KolektibilitasModel->select('no_kontrak, MIN(tanggal_cicilan) AS tanggal_cicilan' , false)->groupBy('no_kontrak')->paginate(6000), // Mengambil data cicilan kolektibilitas dan melakukan penomoran halaman.
             'pager' => $this->KolektibilitasModel->pager,  // Mengatur pengaturan halaman.
             'isi' => 'kolektibilitas/v_list',  // Memuat tampilan 'v_list' sebagai konten halaman.
         ];
@@ -46,7 +48,6 @@ class Kolektibilitas extends BaseController
             'tanggal_cicilan' => $this->request->getPost('tanggal_cicilan'),
             'angsuran_pokok' => $this->request->getPost('angsuran_pokok'),
             'angsuran_jasa' => $this->request->getPost('angsuran_jasa'),
-            'kode_kolektibilitas' => $this->request->getPost('kode_kolektibilitas'),
         ];
         $this->KolektibilitasModel->insert_kolektibilitas($data);  // Memanggil model untuk menyimpan data cicilan kolektibilitas.
         session()->setFlashdata('success', 'Data Berhasil di Tambahkan');  // Menampilkan pesan sukses.
@@ -72,7 +73,6 @@ class Kolektibilitas extends BaseController
             'tanggal_cicilan' => $this->request->getPost('tanggal_cicilan'),
             'angsuran_pokok' => $this->request->getPost('angsuran_pokok'),
             'angsuran_jasa' => $this->request->getPost('angsuran_jasa'),
-            'kode_kolektibilitas' => $this->request->getPost('kode_kolektibilitas'),
         ];
         $this->KolektibilitasModel->update_kolektibilitas($data, $no_kontrak);  // Memanggil model untuk menyimpan perubahan data cicilan kolektibilitas.
         session()->setFlashdata('success', 'Data Berhasil di Update');  // Menampilkan pesan sukses.
@@ -90,10 +90,10 @@ class Kolektibilitas extends BaseController
     public function display($no_kontrak)
     {
         $data = [
-            'title' => 'Display',  // Mengatur judul tampilan.
+            'title' => 'Kolektibilitas Per ' . strftime('%d %B', strtotime("last day of last month")),  // Mengatur judul tampilan.
             'kolektibilitas' => $this->KolektibilitasModel->display_kolektibilitas($no_kontrak),  // Mendapatkan data cicilan kolektibilitas yang akan diedit.
             'isi' => 'kolektibilitas/v_display',  // Memuat tampilan 'v_edit' sebagai konten halaman.
-            'tes_kolektibilitas' => $this->hitung_kolektibilitas($no_kontrak),
+            'no_kontrak' => $no_kontrak,
         ];
         echo view('layout/v_wrapper', $data);
     }
@@ -105,9 +105,9 @@ class Kolektibilitas extends BaseController
         $model = model(KolektibilitasModel::class);
         
         // Pokok dan jasa masih diasumsikan berada pada bayaran pertama dalam tabel cicilan
-        $query = $model->select('angsuran_pokok')->where('no_kontrak', $no_kontrak)->where('angsuran_pokok >', 0)->orderBy('tanggal_cicilan', 'ASC')->limit(1)->get()->getRowArray();
+        $query = $model->select('angsuran_pokok')->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->limit(1)->get()->getRowArray();
         $pokoktetap = (int)implode("", $query);
-        $query = $model->select('angsuran_jasa')->where('no_kontrak', $no_kontrak)->where('angsuran_pokok >', 0)->orderBy('tanggal_cicilan', 'ASC')->limit(1)->get()->getRowArray();
+        $query = $model->select('angsuran_jasa')->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->limit(1)->get()->getRowArray();
         $jasatetap = (int)implode("", $query);
         $pokok = 0;
         $jasa = 0;
@@ -121,13 +121,20 @@ class Kolektibilitas extends BaseController
         $tanggalSebelumnya = 0;
         $tanggalLunas = 0;
 
-        $total = $model->distinct()->where('no_kontrak', $no_kontrak)->where('angsuran_pokok >', 0)->orderBy('tanggal_cicilan', 'ASC')->get()->getNumRows();
+        $total = $model->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->get()->getNumRows();
+
+        if($total > 5)
+        {
+            $offset = $total - 5;
+        } else {
+            $offset = 0;
+        }
         
-        // Variabel query disini, kalau bisa jangan dipakai kembali karena akan digunakan kembali pada loop for
-        $query = $model->distinct()->where('angsuran_pokok >', 0)->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->get();
+        // Variabel query disini, kalo bisa jangan dipakai kembali karena akan digunakan kembali pada loop for
+        $query = $model->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->limit($offset, 5)->get();
         $row = $query->getRowArray();
 
-        for($j = 0; $j < $total; $j++)
+        for($j = 0; $j < $total - $offset; $j++)
         {
             if(isset($row))
             {
@@ -135,9 +142,14 @@ class Kolektibilitas extends BaseController
                 $pokok = $row['angsuran_pokok'];
                 $jasa = $row['angsuran_jasa'];
             }
-
+            
             $cicilan = $pokok + $jasa;
             
+            if($j == $total - $offset - 1)
+            {
+                $tanggal = strtotime("last day of last month");
+            }
+
             if($tanggalLunas == 0)
             {
                 $selisihHari = ($tanggalSebelumnya == 0 ? 0 : round(abs($tanggalSebelumnya - $tanggal) / 86400));
@@ -145,6 +157,7 @@ class Kolektibilitas extends BaseController
                 $selisihHari = ($tanggalLunas == 0 ? 0 : round(abs($tanggalLunas - $tanggal / 86400)));
             }
             
+
             $cicilan = $cicilan - $jasatetap - $selisih;
     
             if($cicilan == $pokoktetap || $cicilan > $pokoktetap)
@@ -202,16 +215,36 @@ class Kolektibilitas extends BaseController
             {
                 $kolek+=1;
             }
-    
-            array_push($totalkolek, $kolek);
+
             $kolekSebelumnya = $kolek;
             $cicilanSebelumnya = $cicilan;
             $tanggalSebelumnya = $tanggal;
             $selisihSebelumnya = $selisih;
             $row = $query->getNextRow('array');
         }
-        // return $kolek;
-        return $totalkolek;
-        // return $total;
+        $query = $model->select('tanggal_cicilan')->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'DESC')->limit(1)->get()->getRowArray();
+        $model->set('kode_kolektibilitas', $kolek, false)->where('tanggal_cicilan', $query)->update();
+        return redirect()->to(base_url('kolektibilitas/display/' . $no_kontrak));
+    }
+
+    public function cek_kolektibilitas()
+    {
+        $model = model(KolektibilitasModel::class);
+        $total = $model->select('no_kontrak')->distinct()->getNumRows();
+
+        $query = $model->select('no_kontrak')->distinct()->orderBy('no_kontrak',  'ASC');
+        $row = $query->getRowArray();
+        
+        for($i = 0; $i < $total; $i++)
+        {
+            if(isset($row))
+            {
+                $no_kontrak = $row['no_kontrak'];
+            }
+            $this->hitung_kolektibilitas($no_kontrak);
+            $row = $query->getNextRow('array');
+        }
+        
+        return redirect()->to(base_url('kolektibilitas'));
     }
 }

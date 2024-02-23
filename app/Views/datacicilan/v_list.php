@@ -28,7 +28,6 @@
                 <th>Keterangan Cicilan</th>
                 <th>No Cicilan</th>
                 <th>PB</th>
-                <th>Kode Kolektibilitas</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -45,7 +44,6 @@
                     <td><?= $value['keterangan_cicilan']; ?></td>
                     <td><?= $value['no_cicilan']; ?></td>
                     <td><?= $value['pb']; ?></td>
-                    <td><?= $value['kode_kolektibilitas']; ?></td>
 
                     <td>
                         <a href="<?= base_url('datacicilan/edit/' . $value['no_kontrak']) ?>" class="href btn btn-warning">Edit</a>

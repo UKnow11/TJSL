@@ -1,6 +1,8 @@
 <div class="col-sm-12">
     <!-- Ini adalah elemen div dengan kelas "col-sm-12", yang mengatur lebar elemen menjadi satu baris penuh pada tampilan kecil (small) menggunakan Bootstrap. -->
 
+    <a href="<?= base_url('kolektibilitas/tambah') ?>" class="href class btn btn-primary">Update Data</a>
+    <a href="<?= base_url('kolektibilitas/hitung_kolektibilitas/' . $no_kontrak) ?>" class="href class btn btn-primary">Update Kolektibilitas</a>
     <br><br>
     <!-- Garis putus-putus untuk memberikan jarak di antara elemen. -->
 
@@ -28,7 +30,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php $no = 1; $count = 0;
+            <?php
             foreach ($kolektibilitas as $key => $value) { ?>
                 <!-- PHP digunakan untuk mengulang data kolektibilitas dan menampilkannya dalam tabel. -->
                 <tr>
@@ -36,10 +38,9 @@
                     <td><?= $value['tanggal_cicilan']; ?></td>
                     <td><?= $value['angsuran_pokok']; ?></td>
                     <td><?= $value['angsuran_jasa']; ?></td>
-                    <td><?= $tes_kolektibilitas[$count]; ?></td>
+                    <td><?= $value['kode_kolektibilitas']; ?></td>
                 </tr>
-            <?php $count++; } ?>
-            <?php $count; ?>
+            <?php  } ?>
         </tbody>
     </table>
 </div>

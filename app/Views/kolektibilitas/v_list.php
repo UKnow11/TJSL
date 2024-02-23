@@ -2,6 +2,7 @@
     <!-- Ini adalah elemen div dengan kelas "col-sm-12", yang mengatur lebar elemen menjadi satu baris penuh pada tampilan kecil (small) menggunakan Bootstrap. -->
 
     <a href="<?= base_url('kolektibilitas/tambah') ?>" class="href class btn btn-primary">Tambah Data</a>
+    <a href="<?= base_url('kolektibilitas/cek_kolektibilitas') ?>" class="href class btn btn-primary">Update Kolektibilitas</a>
     <!-- Ini adalah tautan (link) "Tambah Data" yang mengarah ke URL "kolektibilitas/tambah" dengan kelas "btn btn-primary" untuk memberikan tampilan tombol berwarna biru (warna primer). -->
 
     <br><br>

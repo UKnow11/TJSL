@@ -55,7 +55,6 @@ class DataCicilan extends BaseController
             'keterangan_cicilan' => $this->request->getPost('keterangan_cicilan'),
             'no_cicilan' => $this->request->getPost('no_cicilan'),
             'pb' => $this->request->getPost('pb'),
-            'kode_kolektibilitas' => $this->request->getPost('kode_kolektibilitas'),
         ];
 
         // Memasukkan data cicilan ke dalam database menggunakan DataCicilanModel.

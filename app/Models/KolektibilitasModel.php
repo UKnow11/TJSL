@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class KolektibilitasModel extends Model
 {
     protected $table = 'cicilan';
+    protected $allowedFields = ['tanggal_cicilan', 'angsuran_pokok', 'angsuran_jasa', 'keterangan_cicilan', 'no_cicilan', 'pb', 'kode_kolektibilitas'];
 
     public function get_kolektibilitas()
     {
@@ -42,6 +43,6 @@ class KolektibilitasModel extends Model
 
     public function display_kolektibilitas($no_kontrak)
     {
-        return $this->db->table('cicilan')->distinct()->where('no_kontrak', $no_kontrak)->where('angsuran_pokok >', 0)->orderBy('tanggal_cicilan', 'ASC')->get()->getResultArray();
+        return $this->db->table('cicilan')->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->get()->getResultArray();
     }
 }
