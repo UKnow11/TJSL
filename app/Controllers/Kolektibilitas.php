@@ -89,6 +89,7 @@ class Kolektibilitas extends BaseController
 
     public function display($no_kontrak)
     {
+        // Method display: Menampilkan page display untuk melihatkan kolektibilitas data cicilan dengan lebih detail
         $data = [
             'title' => 'Kolektibilitas Per ' . strftime('%d %B', strtotime("last day of last month")),  // Mengatur judul tampilan.
             'kolektibilitas' => $this->KolektibilitasModel->display_kolektibilitas($no_kontrak),  // Mendapatkan data cicilan kolektibilitas yang akan diedit.
@@ -100,7 +101,7 @@ class Kolektibilitas extends BaseController
 
     public function hitung_kolektibilitas($no_kontrak)
     {
-        // Method untuk menghitung kolektibilitas berdasarkan nomor kontrak
+        // Method hitung_kolektibilitas : Method untuk melakukan update kolektibilitas berdasarkan nomor kontrak dan 
 
         $model = model(KolektibilitasModel::class);
         
@@ -121,8 +122,11 @@ class Kolektibilitas extends BaseController
         $tanggalSebelumnya = 0;
         $tanggalLunas = 0;
 
+        // Variabel total digunakan untuk menyimpan jumlah row dalam tabel cicilan
         $total = $model->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->get()->getNumRows();
 
+        // Jika total di atas 5, maka variabel query di bawah akan mengambil 5 row dari tabel cicilan
+        // Jika total di bawah 5, maka variabel query hanya akan mengambil sebanyak jumlah row yang tersedia (jika hanya terdapat 3 row, maka hanya akan diambil 3)
         if($total > 5)
         {
             $offset = $total - 5;
@@ -134,8 +138,10 @@ class Kolektibilitas extends BaseController
         $query = $model->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'ASC')->limit($offset, 5)->get();
         $row = $query->getRowArray();
 
+        // For hanya akan mengulang sebanyak total row yang tersedia
         for($j = 0; $j < $total - $offset; $j++)
         {
+            // Cek apakah variabel row sudah di declare dan memiliki isi menggunakan isset
             if(isset($row))
             {
                 $tanggal = strtotime($row['tanggal_cicilan']);
@@ -145,11 +151,13 @@ class Kolektibilitas extends BaseController
             
             $cicilan = $pokok + $jasa;
             
+            // Cek jika loop sudah menyentuh row terakhir dari tabel cicilan
             if($j == $total - $offset - 1)
             {
                 $tanggal = strtotime("last day of last month");
             }
 
+            // Cek apakah variabel tanggal lunas sudah memiliki isi. Jika belum maka selisih hari akan dihitung berdasarkan tanggal lunas. Jika sudah maka akan dihitung berdasarkan tanggal sebelumnya
             if($tanggalLunas == 0)
             {
                 $selisihHari = ($tanggalSebelumnya == 0 ? 0 : round(abs($tanggalSebelumnya - $tanggal) / 86400));
@@ -157,9 +165,10 @@ class Kolektibilitas extends BaseController
                 $selisihHari = ($tanggalLunas == 0 ? 0 : round(abs($tanggalLunas - $tanggal / 86400)));
             }
             
-
+            // Variabel cicilan akan digunakan sebagai patokan untuk menentukan cicilan parsial atau full
             $cicilan = $cicilan - $jasatetap - $selisih;
     
+            // Jika cicilan melebihi atau sama dengan pokok maka cicilan akan dianggap full. Jika kurang dari pokok maka cicilan akan dianggap parsial
             if($cicilan == $pokoktetap || $cicilan > $pokoktetap)
             {
                 $selisih = 0;
@@ -167,11 +176,14 @@ class Kolektibilitas extends BaseController
                 $selisih = $pokoktetap - $cicilan;
             }
             
+            // Penghitungan cicilan parsial 
             if($selisih != 0)
             {
+                // If untuk mengecek cicilan parsial
                 if($cicilanSebelumnya + $selisihSebelumnya == $pokoktetap && $cicilan > 0)
                 {
                     $tanggalLunas = $tanggalSebelumnya;
+                // Else if untuk mengecek jika cicilan tidak dapat membayar selisih pokok sebelumnya
                 } else if($cicilan < 0) {
                     if($tanggalLunas == 0)
                     {
@@ -179,6 +191,7 @@ class Kolektibilitas extends BaseController
                     }
                     $selisihHari = ($tanggalLunas == 0 ? 0 : round(abs($tanggalLunas - $tanggal) / 86400));
                 } else {
+                // If untuk mengecek transisi cicilan parsial menjadi cicilan full
                     if($selisihSebelumnya != 0)
                     {
                         $tanggalLunas = $tanggalSebelumnya;
@@ -188,6 +201,7 @@ class Kolektibilitas extends BaseController
                 }
             }
             
+            // If untuk menghitung kolektibilitas berdasarkan selisih hari (prioritas awal penghitungan kolektibilitas)
             if($selisihHari <= 30)
             {
                 $kolek = 1;
@@ -216,12 +230,14 @@ class Kolektibilitas extends BaseController
                 $kolek+=1;
             }
 
+            // Variabel kolektibilitas, cicilan, tanggal, dan selisih disimpan untuk menjadi patokan penghitungan kolektiblitas selanjutnya
             $kolekSebelumnya = $kolek;
             $cicilanSebelumnya = $cicilan;
             $tanggalSebelumnya = $tanggal;
             $selisihSebelumnya = $selisih;
             $row = $query->getNextRow('array');
         }
+        // Update kolektibilitas dengan data terbaru
         $query = $model->select('tanggal_cicilan')->distinct()->where('no_kontrak', $no_kontrak)->orderBy('tanggal_cicilan', 'DESC')->limit(1)->get()->getRowArray();
         $model->set('kode_kolektibilitas', $kolek, false)->where('tanggal_cicilan', $query)->update();
         return redirect()->to(base_url('kolektibilitas/display/' . $no_kontrak));
@@ -229,10 +245,11 @@ class Kolektibilitas extends BaseController
 
     public function cek_kolektibilitas()
     {
+        // Method cek_kolektibilitas: Melakukan update kolektibilitas dengan method hitung_kolektibilitas pada semua data yang tersedia dalam tabel cicilan
         $model = model(KolektibilitasModel::class);
-        $total = $model->select('no_kontrak')->distinct()->getNumRows();
+        $total = $model->select('no_kontrak')->distinct()->get()->getNumRows();
 
-        $query = $model->select('no_kontrak')->distinct()->orderBy('no_kontrak',  'ASC');
+        $query = $model->select('no_kontrak')->distinct()->orderBy('no_kontrak',  'ASC')->get();
         $row = $query->getRowArray();
         
         for($i = 0; $i < $total; $i++)
